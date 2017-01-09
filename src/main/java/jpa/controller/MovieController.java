@@ -37,12 +37,12 @@ public class MovieController {
 	}
 	
 	// ex) http://localhost:8080/movie/delete/1
-	@RequestMapping(value="/delete/{empno}", method = RequestMethod.GET)
+	@RequestMapping(value="/delete/{movieNo}", method = RequestMethod.GET)
 	public void delete(@PathVariable Long movieNo){
 		movieService.delete(movieNo);
 	}
 	
-	// http://localhost:8080/movie/getall.do
+	// http://localhost:8080/movie/getAll
 	@RequestMapping(value="/getAll", method = RequestMethod.GET)
 	public List<Movie> getAll(){
 		return movieService.getAll();
